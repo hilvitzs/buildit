@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Input from './Input';
 
-const api_key = process.env.api_key;
+const api_key = process.env.REACT_APP_API_KEY;
 
 class App extends Component {
   constructor() {
@@ -26,7 +26,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(process.env)
     return (
       <div className="App">
         <Input getWeather={this.getWeather} />
