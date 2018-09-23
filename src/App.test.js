@@ -4,14 +4,18 @@ import App from './App';
 import { shallow } from 'enzyme';
 
 describe('App', () => {
-  // beforeEach = () => {
-  //   let wrapper = shallow(<App />);
-  //   console.log(wrapper);
-  // };
+  let wrapper;
 
-  it('Should load with input', () => {
-    const wrapper = shallow(<App />);
-    expect(wrapper.find('input').toHaveLength(1));
+  beforeEach(() => {
+    wrapper = shallow(<App />);
+  });
+
+  it('renders app', () => {
+    expect(wrapper.find('div.App')).toHaveLength(1);
+  });
+
+  it('renders a forecast-container', () => {
+    expect(wrapper.find('section.forecast-container')).toHaveLength(1);
   });
 });
 
