@@ -19,6 +19,13 @@ class App extends Component {
   }
 
   getWeather(location) {
+    if (Object.keys(this.state.weather).length > 0) {
+      this.setState({
+        city: {},
+        weather: {},
+        fiveDay: [],
+      });
+    }
     fetch(`https://api.openweathermap.org/data/2.5/forecast?zip=${location}&appid=${api_key}&units=imperial&cnt=40`)
       .then(response => response.json())
       .then((myWeather) => {
@@ -29,7 +36,9 @@ class App extends Component {
           this.calculateDailyTemps();
         });
       })
-      .catch(err => console.error(err));
+      .catch(err => { 
+        console.error(err); alert('Something went wrong. Please check your zip code.'); 
+      });
   }
 
   cleanTime(time) {
