@@ -31,9 +31,6 @@ export default class Input extends Component {
   }
 
   render() {
-    let { city } = this.props;
-
-
     return (
       <form className="zip-form" onSubmit={this.onSubmit}>
         <input className="zip-input" placeholder="Zip Code" value={this.state.input} onChange={this.updateState} />

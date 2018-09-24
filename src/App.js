@@ -29,6 +29,7 @@ class App extends Component {
           this.calculateDailyTemps();
         });
       })
+      .catch(err => console.error(err));
   }
 
   cleanTime(time) {
