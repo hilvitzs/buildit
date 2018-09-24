@@ -35,13 +35,10 @@ export default class Input extends Component {
 
 
     return (
-      <section className="header-section">
-        <div className="city">{city}</div>
-        <form className="zip-form" onSubmit={this.onSubmit}>
-          <input className="zip-input" placeholder="Zip Code" value={this.state.input} onChange={this.updateState} />
-          <button className="submit-btn">SEARCH</button>
-        </form>
-      </section>
+      <form className="zip-form" onSubmit={this.onSubmit}>
+        <input className="zip-input" placeholder="Zip Code" value={this.state.input} onChange={this.updateState} />
+        <button className="submit-btn">SEARCH</button>
+      </form>
     );
   }
 }

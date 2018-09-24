@@ -19,7 +19,7 @@ class App extends Component {
   }
 
   getWeather(location) {
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?zip=${location}&appid=${api_key}&units=imperial`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?zip=${location}&appid=${api_key}&units=imperial&cnt=40`)
       .then(response => response.json())
       .then((myWeather) => {
         this.setState({
@@ -101,7 +101,10 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Input getWeather={this.getWeather} city={city.name}/>
+        <div className="header-section">
+          <div className="city">{city.name}</div>
+          <Input getWeather={this.getWeather} city={city.name} />
+        </div>
         <section className="forecast-container">
           {
             fiveDay.map(dailyForecast =>

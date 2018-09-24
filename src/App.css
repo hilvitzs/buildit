@@ -17,3 +17,18 @@ html, body {
   width: 90%;
   margin: auto;
 }
+
+.header-section {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.city {
+  margin-left: 10px;
+  font-weight: 700;
+  color: #454545;
+  margin: auto 10px;
+}
