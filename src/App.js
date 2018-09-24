@@ -104,7 +104,7 @@ class App extends Component {
       <div className="App">
         <div className="header-section">
           <div className="city">{city.name}</div>
-          <Input getWeather={this.getWeather} city={city.name} />
+          <Input getWeather={this.getWeather} />
         </div>
         <section className="forecast-container">
           {

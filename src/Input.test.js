@@ -3,18 +3,14 @@ import ReactDOM from 'react-dom';
 import fetchMock from 'fetch-mock';
 import Input from './Input';
 import { shallow } from 'enzyme';
-import { spy } from 'sinon';
 
 describe('Input', () => {
   let wrapper;
 
   beforeEach(() => {
     let mockGetWeather = jest.fn();
-    let mockCity = {
-      name: 'Broomfield'
-    };
 
-    wrapper = shallow(<Input getWeather={mockGetWeather} city={mockCity} />)
+    wrapper = shallow(<Input getWeather={mockGetWeather} />)
   });
 
   it ('should have an input', () => {
@@ -39,5 +35,18 @@ describe('Input', () => {
 
   it('should have a submit button', () => {
     expect(wrapper.find('button')).toHaveLength(1);
+  });
+
+  it('should set state to an empty string with submit', () => {
+    let input = wrapper.find('input');
+    let form = wrapper.find('form');
+
+    input.simulate('change', {target: {value: '80516'}});
+
+    expect(wrapper.instance().state.input).toEqual('80516');
+    
+    form.simulate('submit', { preventDefault () {} });
+    
+    expect(wrapper.instance().state.input).toEqual('');
   });
 });

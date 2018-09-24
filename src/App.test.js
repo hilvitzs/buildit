@@ -1849,5 +1849,3 @@ describe('App', () => {
     expect(shallowWrapper.state().fiveDay).toEqual(fiveDay);
   });
 });
-
-

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Hourly } from './Hourly';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('Hourly', () => {
   let wrapper;
