@@ -1,6 +1,6 @@
 #Buildit Code Challenge
 
-[Github-repo](https://github.com/hilvitzs/buildit)
+[Github-repo](https://github.com/hilvitzs/buildit) |
 [Hosted Site](https://sh-buildit.herokuapp.com/)
 
 #Instructions
@@ -28,6 +28,6 @@ I chose to leave Redux out of this application because I did not think there was
 
 There are certainly changes that I would like to make given the chance. While the design is alright, I would like to add some other aspects that make it look a little bit more polished. I would probably standardize the response and clean the data a little bit more in order to better display more information for the user.
 
-This API recommended using the city id rather than a zip code. I only allow users to enter their zip code in order to get weather information. The API is a little bit different in that you need to have different url's in order to search by city. I would definitely use either switch statements or some if..else statements in order to allow people to search by city and zip code. I would also then send the responses back to the API in order to get the city id and most specific information.
+This API recommended using the city id rather than a zip code. I only allow users to enter their zip code in order to get weather information. The API is a little bit different in that you need to have different url's in order to search by city. I would definitely use either switch statements or some if..else statements in order to allow people to search by city and zip code. I would also then send the responses back to the API in order to get the city id and the most specific information.
 
 Thank you for the challenge. I really appreciate any feedback, especially things that I could implement better.
