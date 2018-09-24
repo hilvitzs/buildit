@@ -6,7 +6,7 @@ export const Hourly = ({ hourlyForecast }) => {
     <div className="hourly">
       <p id="time">{hourlyForecast.dateTime.time}</p>
       <img className="icon" alt={`${hourlyForecast.weatherDesc} weather`} src={`https://openweathermap.org/img/w/${hourlyForecast.weatherIcon}.png`} />
-      <p id="desc">{hourlyForecast.weatherDesc}</p>
+      <p id="temp">{Math.round(hourlyForecast.temp)}ºF</p>
     </div>
   )
 }

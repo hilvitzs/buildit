@@ -8,8 +8,14 @@ export const Daily = ({ dailyForecast, weather }) => {
       <div className="daily-forecast-container">
         <p id="date">{dailyForecast.date}</p>
         <div className="temp-container">
-          <p id="high-temp">{dailyForecast.highTemp}ºF</p>
-          <p id="low-temp">{dailyForecast.lowTemp}ºF</p>
+          <div className="high-low">
+            <p>HIGH</p>
+            <p id="high-temp">{dailyForecast.highTemp}ºF</p>
+          </div>
+          <div className="high-low">
+            <p id="low-temp">{dailyForecast.lowTemp}ºF</p>
+            <p>LOW</p>
+          </div>
         </div>
       </div>
       {

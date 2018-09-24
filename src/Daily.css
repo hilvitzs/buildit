@@ -26,10 +26,27 @@
   margin: 0;
 }
 
+#low-temp {
+  border-bottom: 1px solid #454545;
+}
+
+#high-temp {
+  border-top: 1px solid #454545;
+}
+
 .temp-container {
   display: flex;
   justify-content: space-evenly;
 }
 
+.high-low {
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+}
+
+.high-low > p {
+  margin: 0;
+}
 
 

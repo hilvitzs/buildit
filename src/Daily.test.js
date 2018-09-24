@@ -427,6 +427,10 @@ describe('Daily', () => {
     expect(wrapper.find('.day')).toHaveLength(1);
   });
 
+  it('should render 2 high-low divs', () => {
+    expect(wrapper.find('.high-low')).toHaveLength(2);
+  })
+
   it('should render a high temp', () => {
     expect(wrapper.find('#high-temp')).toHaveLength(1);
   });

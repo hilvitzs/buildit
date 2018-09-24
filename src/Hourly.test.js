@@ -34,7 +34,7 @@ describe('Hourly', () => {
     expect(wrapper.find('.icon')).toHaveLength(1);
   });
 
-  it('should render a description', () => {
-    expect(wrapper.find('#desc')).toHaveLength(1);
+  it('should render a temperature', () => {
+    expect(wrapper.find('#temp')).toHaveLength(1);
   });
 });
