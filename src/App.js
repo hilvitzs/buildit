@@ -26,7 +26,17 @@ class App extends Component {
         fiveDay: [],
       });
     }
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?zip=${location}&appid=${api_key}&units=imperial&cnt=40`)
+    var reg = /^\d+$/;
+
+    let locationCheck = (location) => {
+      if (reg.test(location)) {
+        return `zip=${location}`
+      } else {
+        return `q=${location}`
+      }
+    }
+
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?${locationCheck(location)}&appid=${api_key}&units=imperial&cnt=40`)
       .then(response => response.json())
       .then((myWeather) => {
         this.setState({
@@ -36,8 +46,8 @@ class App extends Component {
           this.calculateDailyTemps();
         });
       })
-      .catch(err => { 
-        console.error(err); alert('Something went wrong. Please check your zip code.'); 
+      .catch(err => {
+        console.error(err); alert('Something went wrong. Please check your zip code.');
       });
   }
 
