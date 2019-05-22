@@ -36,8 +36,8 @@ class App extends Component {
       }
     }
 
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?${locationCheck(location)}&appid=${api_key}&units=imperial&cnt=40`)
-      .then(response => response.json())
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?${locationCheck(location)}&appid=${api_key}&units=imperial&cnt=40q=${location}`)
+      .then(response => console.log(response))
       .then((myWeather) => {
         this.setState({
           city: myWeather.city,
